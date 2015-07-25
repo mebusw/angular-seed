@@ -38,6 +38,17 @@ angular.module('myApp.controllers', []).
            });
         };
   }])
+  .controller('MyCtrl4', ['$scope', '$http', function($scope, $http) {
+        $scope.books = [];
+        $scope.getRemoteData = function(keyword) {
+          $http.get('./js/data.json')
+          .success(function(data){
+            console.log(keyword);
+            console.log(data);
+            $scope.books = data;
+          })
+        }
+  }])
   .controller('PhoneListCtrl', ['$scope', '$location', function($scope, $location) {
     $scope.phones = [
       {"name": "Nexus S",

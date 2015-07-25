@@ -1,0 +1,10 @@
+<p>This is the partial for view 4.</p>
+
+<div ng-controller="MyCtrl4">
+	<button ng-click="getRemoteData(99)">获取数据</button>
+	<ul>		
+		<li ng-repeat="book in books">
+			{{ book.name }} - {{ book.price}}
+		</li>
+	</ul>
+</div>

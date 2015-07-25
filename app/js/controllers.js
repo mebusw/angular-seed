@@ -47,7 +47,12 @@ angular.module('myApp.controllers', []).
             console.log(data);
             $scope.books = data;
           })
+        };
+        $scope.sayHello = function (name) {
+          console.log("Hello " + name);
+          alert("Hello " + name);
         }
+
   }])
   .controller('PhoneListCtrl', ['$scope', '$location', function($scope, $location) {
     $scope.phones = [

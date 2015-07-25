@@ -26,11 +26,11 @@ angular.module('myApp.directives', []).
       }
     };
   }).
-  directive('custom', function() {
-    console.log('custom directive');
+  directive('drink', function() {
+    console.log('drink directive');
     return {
       restrict: "E",
-      template: "<div>Custom Directive</div>",
+      template: "<div>Drink Directive</div>",
     };
   })
   ;

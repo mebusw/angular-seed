@@ -40,10 +40,10 @@ angular.module('myApp.controllers', []).
   }])
   .controller('MyCtrl4', ['$scope', '$http', function($scope, $http) {
         $scope.books = [];
-        $scope.getRemoteData = function(keyword) {
+        $scope.getRemoteData = function(ctrlFlavor) {
+          console.log('getRemoteData:' + ctrlFlavor);
           $http.get('./js/data.json')
           .success(function(data){
-            console.log(keyword);
             console.log(data);
             $scope.books = data;
           })

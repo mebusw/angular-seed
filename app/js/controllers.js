@@ -38,7 +38,7 @@ angular.module('myApp.controllers', []).
            });
         };
   }])
-  .controller('MyCtrl4', ['$scope', '$http', function($scope, $http) {
+  .controller('MyCtrl4', ['$scope', '$http', 'dataListService', function($scope, $http, dataListService) {
         $scope.books = [];
         $scope.getRemoteData = function(ctrlFlavor) {
           console.log('getRemoteData:' + ctrlFlavor);
@@ -51,6 +51,7 @@ angular.module('myApp.controllers', []).
         $scope.sayHello = function (name) {
           console.log("Hello " + name);
           alert("Hello " + name);
+          dataListService(name, 123);
         }
 
   }])

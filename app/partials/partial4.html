@@ -3,8 +3,10 @@
 <div ng-controller="MyCtrl4">
 	<button ng-click="getRemoteData(99)">获取数据</button>
 	<ul>		
-		<li ng-repeat="book in books">
+		<li ng-repeat="book in books" discount=20>
 			{{ book.name }} - {{ book.price}}
 		</li>
 	</ul>
+
+	<custom></custom>
 </div>
